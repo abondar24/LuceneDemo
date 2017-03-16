@@ -1,4 +1,4 @@
-package org.abondar.experimental.lucenedemo.basics;
+package org.abondar.experimental.lucenedemo;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;

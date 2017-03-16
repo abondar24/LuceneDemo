@@ -1,4 +1,4 @@
-package org.abondar.experimental.lucenedemo.basics;
+package org.abondar.experimental.lucenedemo;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 
@@ -39,6 +39,7 @@ public class Indexer {
 
 
         IndexWriterConfig config = new IndexWriterConfig(new StandardAnalyzer());
+        config.setUseCompoundFile(false);
         Directory indexDirectory = FSDirectory.open(indexDir.toPath());
         IndexWriter writer = new IndexWriter(indexDirectory, config);
 
