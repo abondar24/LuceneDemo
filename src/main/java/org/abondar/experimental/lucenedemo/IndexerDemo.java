@@ -2,6 +2,7 @@ package org.abondar.experimental.lucenedemo;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 
+import org.apache.lucene.analysis.tokenattributes.KeywordAttribute;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
@@ -17,7 +18,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.Date;
 
-public class Indexer {
+public class IndexerDemo {
     public static void main(String[] args) throws Exception {
 
         File indexDir = new File("/home/abondar/Doucments");

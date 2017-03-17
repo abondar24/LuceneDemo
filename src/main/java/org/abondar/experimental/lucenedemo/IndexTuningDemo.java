@@ -10,7 +10,7 @@ import org.apache.lucene.store.FSDirectory;
 
 import java.io.File;
 
-public class IndexTuning {
+public class IndexTuningDemo {
 
     public static void main(String[] args) throws Exception {
         int docsInIndex = 100;

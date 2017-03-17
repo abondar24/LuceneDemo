@@ -11,7 +11,7 @@ import org.apache.lucene.store.FSDirectory;
 
 import java.io.File;
 
-public class Explanator {
+public class ExplanatorDemo {
 
     public static void main(String[] args) throws Exception {
         String indexDir = "/home/abondar/Doucments";

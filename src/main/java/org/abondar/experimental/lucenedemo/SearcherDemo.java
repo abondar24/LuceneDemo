@@ -13,7 +13,7 @@ import java.io.File;
 import java.util.Date;
 
 
-public class Searcher {
+public class SearcherDemo {
 
     public static void main(String[] args) throws Exception {
         File indexDir = new File("/home/abondar/Doucments");
