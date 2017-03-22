@@ -35,8 +35,9 @@ public class SortingClass {
 
         System.out.println(
                 StringUtils.rightPad("contents", 10) +
-                        StringUtils.center("id",  4)+
-                StringUtils.center("filename",  10));
+                        StringUtils.center("id", 4) +
+                        StringUtils.center("filename", 10) +
+                        StringUtils.center("score", 15));
 
         DecimalFormat scoreFormatter = new DecimalFormat("0.######");
         for (int i = 0; i < hits.scoreDocs.length; i++) {
@@ -44,8 +45,8 @@ public class SortingClass {
             System.out.println(StringUtils.rightPad(
                     StringUtils.abbreviate(document.get("contents"), 9), 10)
                     + StringUtils.rightPad(document.get("filename"), 4)
-                    + StringUtils.center("" + searcher.doc(hits.scoreDocs[i].doc), 10)
-                    + StringUtils.leftPad(scoreFormatter.format(hits.scoreDocs[i].score),30));
+                    + StringUtils.center("" + searcher.doc(hits.scoreDocs[i].doc), 4)
+                    + StringUtils.leftPad(scoreFormatter.format(hits.scoreDocs[i].score), 12));
             System.out.println("   ");
 
         }

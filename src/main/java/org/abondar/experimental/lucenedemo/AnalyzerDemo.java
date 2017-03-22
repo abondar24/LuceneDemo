@@ -2,6 +2,7 @@ package org.abondar.experimental.lucenedemo;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.core.KeywordAnalyzer;
 import org.apache.lucene.analysis.core.SimpleAnalyzer;
 import org.apache.lucene.analysis.core.StopAnalyzer;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
@@ -12,9 +13,7 @@ import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
 import java.io.IOException;
 import java.io.StringReader;
 
-/**
- * Created by abondar on 3/15/17.
- */
+
 public class AnalyzerDemo {
     private static final String[] examples = {
             "The quick brown fox jumped over lazy dogs",
@@ -25,7 +24,7 @@ public class AnalyzerDemo {
             new StandardAnalyzer(),
             new StopAnalyzer(),
             new WhitespaceAnalyzer(),
-            new SimpleAnalyzer()
+            new SimpleAnalyzer(),
     };
 
     public static void main(String[] args) throws IOException {
