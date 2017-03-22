@@ -22,7 +22,7 @@ public class IndexerDemo {
     public static void main(String[] args) throws Exception {
 
         File indexDir = new File("/home/abondar/Doucments");
-        File dataDir = new File("/home/abondar/android-sdk-linux");
+        File dataDir = new File("/home/abondar/IdeaProjects");
 
         long start = new Date().getTime();
         int numIndexed = index(indexDir, dataDir);
