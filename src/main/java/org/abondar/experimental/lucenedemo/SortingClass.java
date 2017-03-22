@@ -39,14 +39,14 @@ public class SortingClass {
                 StringUtils.center("filename",  10));
 
         DecimalFormat scoreFormatter = new DecimalFormat("0.######");
-        for (int i = 0; i < hits.totalHits; i++) {
+        for (int i = 0; i < hits.scoreDocs.length; i++) {
             Document document = searcher.doc(hits.scoreDocs[i].doc);
             System.out.println(StringUtils.rightPad(
                     StringUtils.abbreviate(document.get("contents"), 9), 10)
                     + StringUtils.rightPad(document.get("filename"), 4)
                     + StringUtils.center("" + searcher.doc(hits.scoreDocs[i].doc), 10)
                     + StringUtils.leftPad(scoreFormatter.format(hits.scoreDocs[i].score),30));
-            System.out.println("   "+document.get("category"));
+            System.out.println("   ");
 
         }
 

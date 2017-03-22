@@ -22,7 +22,7 @@ public class IndexerDemo {
     public static void main(String[] args) throws Exception {
 
         File indexDir = new File("/home/abondar/Doucments");
-        File dataDir = new File("/home/abondar/IdeaProjects");
+        File dataDir = new File("/home/abondar/android-sdk-linux");
 
         long start = new Date().getTime();
         int numIndexed = index(indexDir, dataDir);
@@ -56,12 +56,11 @@ public class IndexerDemo {
 
         File[] files = dataDir.listFiles();
 
-        for (int i = 0; i < files.length; i++) {
-            File f = files[i];
+        for (File f : files) {
             if (f.isDirectory()) {
                 indexDir(writer, f);
-            } else if (f.getName().endsWith(".txt")){
-                indexFile(writer,f);
+            } else if (f.getName().endsWith(".txt")) {
+                indexFile(writer, f);
             }
         }
     }

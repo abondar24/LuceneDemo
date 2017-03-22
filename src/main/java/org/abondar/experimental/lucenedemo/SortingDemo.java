@@ -13,7 +13,7 @@ public class SortingDemo {
         File indexDir = new File("/home/abondar/Doucments");
 
         QueryParser queryParser = new QueryParser("contents", new StandardAnalyzer());
-        Query query = queryParser.parse("intent");
+        Query query = queryParser.parse("have");
 
         FSDirectory directory = FSDirectory.open(indexDir.toPath());
         SortingClass sortingClass = new SortingClass(directory);
