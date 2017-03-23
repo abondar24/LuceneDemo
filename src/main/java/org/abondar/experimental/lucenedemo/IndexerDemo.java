@@ -17,12 +17,19 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.Date;
+import java.util.Objects;
 
 public class IndexerDemo {
     public static void main(String[] args) throws Exception {
 
         File indexDir = new File("/home/abondar/Doucments");
-        File dataDir = new File("/home/abondar/android-sdk-linux");
+
+        File dataDir;
+        if (args.length==0) {
+             dataDir = new File("/home/abondar/android-sdk-linux");
+        } else {
+            dataDir = new File(args[0]);
+        }
 
         long start = new Date().getTime();
         int numIndexed = index(indexDir, dataDir);
