@@ -7,6 +7,7 @@ import org.abondar.experimental.lucenedemo.command.impl.BooleanQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.ChineseCommand;
 import org.abondar.experimental.lucenedemo.command.impl.ComplexPhraseQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.CustomHitCollectorCommand;
+import org.abondar.experimental.lucenedemo.command.impl.ExplanatorCommand;
 import org.abondar.experimental.lucenedemo.command.impl.FileIndexerCommand;
 import org.abondar.experimental.lucenedemo.command.impl.IndexTuningCommand;
 import org.abondar.experimental.lucenedemo.command.impl.IndexerCommand;
@@ -56,6 +57,12 @@ public class CommandSwitcher {
                 case CPQC:
                     ComplexPhraseQueryCommand cpqc = new ComplexPhraseQueryCommand();
                     executor.executeCommand(cpqc);
+                    break;
+
+                case EC:
+                    ExplanatorCommand ec = new ExplanatorCommand();
+                    executor.executeCommand(ec);
+                    break;
 
                 case FIC:
                     FileIndexerCommand fic = new FileIndexerCommand();

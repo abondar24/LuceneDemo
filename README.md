@@ -18,6 +18,9 @@ Lucene Examples
 15. Analyzer (ac) - Usage of different analyzers (standard,whitespace,simple,stop).
 16. Chinese (cc) - Usage of analyzers against chinese characters.
 17. Custom Hit Collector (chc) - Custom collector for search term hits.
+18. Explanator (ec) - Show different parameters of search results(e.g wieght,score etc.) 
+and the way how are they computed
+
 
 ##Build and run
 

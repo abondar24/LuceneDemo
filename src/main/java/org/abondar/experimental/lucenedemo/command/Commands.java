@@ -6,6 +6,7 @@ public enum  Commands {
     CC,
     CHC,
     CPQC,
+    EC,
     FIC,
     IC,
     ITC,
