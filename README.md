@@ -17,6 +17,7 @@ Lucene Examples
 14. Sorting (soc) - Sort search query results.
 15. Analyzer (ac) - Usage of different analyzers (standard,whitespace,simple,stop).
 16. Chinese (cc) - Usage of analyzers against chinese characters.
+17. Custom Hit Collector (chc) - Custom collector for search term hits.
 
 ##Build and run
 
