@@ -10,7 +10,7 @@ import org.abondar.experimental.lucenedemo.command.impl.SearchCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SpanNearQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SpanTermQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.TermQueryCommand;
-import org.apache.poi.ss.formula.functions.T;
+import org.abondar.experimental.lucenedemo.command.impl.WildcardQueryCommand;
 
 public class CommandSwitcher {
 
@@ -69,6 +69,11 @@ public class CommandSwitcher {
                 case TQC:
                     TermQueryCommand tqc = new TermQueryCommand();
                     executor.executeCommand(tqc);
+                    break;
+
+                case WQC:
+                    WildcardQueryCommand wqc = new WildcardQueryCommand();
+                    executor.executeCommand(wqc);
                     break;
 
             }
