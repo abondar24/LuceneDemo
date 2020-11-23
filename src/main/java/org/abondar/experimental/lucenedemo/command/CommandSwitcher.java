@@ -10,6 +10,7 @@ import org.abondar.experimental.lucenedemo.command.impl.MultifieldQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.PhraseQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.PrefixQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SearchCommand;
+import org.abondar.experimental.lucenedemo.command.impl.SortingCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SpanNearQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SpanTermQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.TermQueryCommand;
@@ -76,6 +77,11 @@ public class CommandSwitcher {
                 case SNQC:
                     SpanNearQueryCommand snqc = new SpanNearQueryCommand();
                     executor.executeCommand(snqc);
+                    break;
+
+                case SOC:
+                    SortingCommand soc = new SortingCommand();
+                    executor.executeCommand(soc);
                     break;
 
                 case STQC:

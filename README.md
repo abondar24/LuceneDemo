@@ -14,6 +14,8 @@ Lucene Examples
 11. Boolean Query (bqc) - Search query with boolean clauses.
 12. Multifield Query (mqc) - Search query for multiple fields.
 13. Complex Phrase Query (cpqc) - Search query for complex phrases (e.g with "when, while")
+14. Sorting (soc) - Sort search query results.
+
 ##Build and run
 
 ```yaml
