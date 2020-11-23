@@ -16,7 +16,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class PDFBoxPDFHandler implements DocumentHandler {
+public class PdfHandler implements DocumentHandler {
 
     public Document getDocument(InputStream is) {
         COSDocument cosDoc = null;

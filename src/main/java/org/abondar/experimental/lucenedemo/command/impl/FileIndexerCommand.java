@@ -18,7 +18,7 @@ import java.util.Date;
 import java.util.Properties;
 
 import static org.abondar.experimental.lucenedemo.DirUtil.DATA_DIR;
-import static org.abondar.experimental.lucenedemo.DirUtil.NEW_FILE_NAME;
+import static org.abondar.experimental.lucenedemo.DirUtil.NEW_FILE;
 
 public class FileIndexerCommand implements Command {
 
@@ -42,7 +42,7 @@ public class FileIndexerCommand implements Command {
             FileIndexer indexer = new FileIndexer(properties);
 
             long start = new Date().getTime();
-            indexer.index(writer, new File(NEW_FILE_NAME));
+            indexer.index(writer, new File(NEW_FILE));
             writer.close();
             long end = new Date().getTime();
 

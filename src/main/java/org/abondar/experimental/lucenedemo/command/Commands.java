@@ -13,6 +13,7 @@ public enum  Commands {
     LTC,
     MQC,
     PQC,
+    PDF,
     PRQC,
     SC,
     SNQC,
