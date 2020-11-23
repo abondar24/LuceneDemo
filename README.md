@@ -10,8 +10,9 @@ Lucene Examples
 7. Prefix Query (prqc) - Search with a prefix query.
 8. Span Term Query (stqc) - Span term query search.
 9. Span Near Query (snqc) - Span near search query. 
-10. Wildcard Query (wqc) - Search query containing wildcard(e.g ?ope*)
-11. Boolean Query (bqc) - Searchy query with boolean clauses
+10. Wildcard Query (wqc) - Search query containing wildcard(e.g ?ope*).
+11. Boolean Query (bqc) - Search query with boolean clauses.
+12. Multifield Query (mqc) - Search query for multiple fields.
 
 ##Build and run
 

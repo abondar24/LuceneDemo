@@ -5,6 +5,7 @@ import org.abondar.experimental.lucenedemo.command.impl.BooleanQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.FileIndexerCommand;
 import org.abondar.experimental.lucenedemo.command.impl.IndexTuningCommand;
 import org.abondar.experimental.lucenedemo.command.impl.IndexerCommand;
+import org.abondar.experimental.lucenedemo.command.impl.MultifieldQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.PhraseQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.PrefixQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SearchCommand;
@@ -45,6 +46,11 @@ public class CommandSwitcher {
                 case ITC:
                     IndexTuningCommand itc = new IndexTuningCommand();
                     executor.executeCommand(itc);
+                    break;
+
+                case MQC:
+                    MultifieldQueryCommand mqc = new MultifieldQueryCommand();
+                    executor.executeCommand(mqc);
                     break;
 
                 case PQC:
