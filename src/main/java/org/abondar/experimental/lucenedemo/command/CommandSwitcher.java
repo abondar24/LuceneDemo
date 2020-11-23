@@ -2,6 +2,7 @@ package org.abondar.experimental.lucenedemo.command;
 
 
 import org.abondar.experimental.lucenedemo.command.impl.BooleanQueryCommand;
+import org.abondar.experimental.lucenedemo.command.impl.ComplexPhraseQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.FileIndexerCommand;
 import org.abondar.experimental.lucenedemo.command.impl.IndexTuningCommand;
 import org.abondar.experimental.lucenedemo.command.impl.IndexerCommand;
@@ -31,6 +32,10 @@ public class CommandSwitcher {
                     BooleanQueryCommand bqc = new BooleanQueryCommand();
                     executor.executeCommand(bqc);
                     break;
+
+                case CPQC:
+                    ComplexPhraseQueryCommand cpqc = new ComplexPhraseQueryCommand();
+                    executor.executeCommand(cpqc);
 
                 case FIC:
                     FileIndexerCommand fic = new FileIndexerCommand();

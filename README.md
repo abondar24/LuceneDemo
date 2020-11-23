@@ -13,7 +13,7 @@ Lucene Examples
 10. Wildcard Query (wqc) - Search query containing wildcard(e.g ?ope*).
 11. Boolean Query (bqc) - Search query with boolean clauses.
 12. Multifield Query (mqc) - Search query for multiple fields.
-
+13. Complex Phrase Query (cpqc) - Search query for complex phrases (e.g with "when, while")
 ##Build and run
 
 ```yaml
