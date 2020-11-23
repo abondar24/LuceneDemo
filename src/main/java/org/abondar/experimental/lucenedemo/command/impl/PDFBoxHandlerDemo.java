@@ -1,6 +1,7 @@
-package org.abondar.experimental.lucenedemo.handlers;
+package org.abondar.experimental.lucenedemo.command.impl;
 
 
+import org.abondar.experimental.lucenedemo.handlers.PDFBoxPDFHandler;
 import org.apache.lucene.document.Document;
 
 import java.io.File;

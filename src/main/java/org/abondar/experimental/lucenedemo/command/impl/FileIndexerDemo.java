@@ -1,6 +1,7 @@
-package org.abondar.experimental.lucenedemo.fileindexer;
+package org.abondar.experimental.lucenedemo.command.impl;
 
 
+import org.abondar.experimental.lucenedemo.fileindexer.FileIndexer;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.core.SimpleAnalyzer;
 import org.apache.lucene.index.DirectoryReader;

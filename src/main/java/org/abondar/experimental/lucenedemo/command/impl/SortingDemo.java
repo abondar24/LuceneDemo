@@ -1,5 +1,6 @@
-package org.abondar.experimental.lucenedemo;
+package org.abondar.experimental.lucenedemo.command.impl;
 
+import org.abondar.experimental.lucenedemo.SortingClass;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.Query;
