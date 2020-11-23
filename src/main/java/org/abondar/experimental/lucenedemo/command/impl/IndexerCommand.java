@@ -71,7 +71,7 @@ public class IndexerCommand implements Command {
         try {
             File indexDir = new File("/home/abondar/index");
 
-            File dataDir =  new File("/home/abondar/Documents");
+            File dataDir =  new File("/home/abondar");
 
 
             long start = new Date().getTime();

@@ -1,7 +1,8 @@
 # LuceneDemo
 Lucene Examples
 
-
+1. Indexer (ic) - Basic index creation
+2. Index Tuning (itc) - Tuned indexing
 
 ##Build and run
 

@@ -1,6 +1,7 @@
 package org.abondar.experimental.lucenedemo.command;
 
 
+import org.abondar.experimental.lucenedemo.command.impl.IndexTuningCommand;
 import org.abondar.experimental.lucenedemo.command.impl.IndexerCommand;
 
 public class CommandSwitcher {
@@ -19,6 +20,11 @@ public class CommandSwitcher {
                 case IC:
                     IndexerCommand ic = new IndexerCommand();
                     executor.executeCommand(ic);
+                    break;
+
+                case ITC:
+                    IndexTuningCommand itc = new IndexTuningCommand();
+                    executor.executeCommand(itc);
                     break;
 
             }
