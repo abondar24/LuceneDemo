@@ -1,6 +1,7 @@
 package org.abondar.experimental.lucenedemo.command;
 
 
+import org.abondar.experimental.lucenedemo.command.impl.BooleanQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.FileIndexerCommand;
 import org.abondar.experimental.lucenedemo.command.impl.IndexTuningCommand;
 import org.abondar.experimental.lucenedemo.command.impl.IndexerCommand;
@@ -24,6 +25,11 @@ public class CommandSwitcher {
     public void executeCommand(String cmd){
         try {
             switch (Commands.valueOf(cmd)){
+
+                case BQC:
+                    BooleanQueryCommand bqc = new BooleanQueryCommand();
+                    executor.executeCommand(bqc);
+                    break;
 
                 case FIC:
                     FileIndexerCommand fic = new FileIndexerCommand();
