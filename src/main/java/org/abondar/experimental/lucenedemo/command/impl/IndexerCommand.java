@@ -17,6 +17,8 @@ import java.io.IOException;
 import java.util.Date;
 
 import static java.util.Objects.requireNonNull;
+import static org.abondar.experimental.lucenedemo.DirUtil.DATA_DIR;
+import static org.abondar.experimental.lucenedemo.DirUtil.INDEX_DIR;
 
 public class IndexerCommand implements Command {
     private static int index(File indexDir, File dataDir) throws IOException {
@@ -69,10 +71,8 @@ public class IndexerCommand implements Command {
     @Override
     public void execute() {
         try {
-            File indexDir = new File("/home/abondar/index");
-
-            File dataDir =  new File("/home/abondar");
-
+            File indexDir = new File(INDEX_DIR);
+            File dataDir =  new File(DATA_DIR);
 
             long start = new Date().getTime();
             int numIndexed = index(indexDir, dataDir);
