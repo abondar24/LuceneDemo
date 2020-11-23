@@ -5,6 +5,7 @@ public enum  Commands {
     IC,
     ITC,
     PQC,
+    PRQC,
     SC,
     TQC,
 }

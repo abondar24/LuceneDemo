@@ -44,14 +44,16 @@ public class IndexerCommand implements Command {
 
         File[] files = dataDir.listFiles();
 
-        requireNonNull(files);
-        for (File f : files) {
-            if (f.isDirectory()) {
-                indexDir(writer, f);
-            } else if (f.getName().endsWith(".txt")) {
-                indexFile(writer, f);
+        if (files!=null){
+            for (File f : files) {
+                if (f.isDirectory()) {
+                    indexDir(writer, f);
+                } else if (f.getName().endsWith(".txt")) {
+                    indexFile(writer, f);
+                }
             }
         }
+
     }
 
     private static void indexFile(IndexWriter writer, File f) throws IOException {

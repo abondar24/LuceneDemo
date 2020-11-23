@@ -7,6 +7,9 @@ Lucene Examples
 4. Term Query (tqc) - Make a search in index by term.
 5. Search (sc) - Make a search by word.
 6. Phrase Query (pqc) - Make a phrase query.
+7. Prefix Query (prqc) - Search with a prefix query.
+
+
 
 ##Build and run
 
