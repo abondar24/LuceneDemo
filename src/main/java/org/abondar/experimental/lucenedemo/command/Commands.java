@@ -10,6 +10,7 @@ public enum  Commands {
     FIC,
     IC,
     ITC,
+    LTC,
     MQC,
     PQC,
     PRQC,
