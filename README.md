@@ -15,6 +15,7 @@ Lucene Examples
 12. Multifield Query (mqc) - Search query for multiple fields.
 13. Complex Phrase Query (cpqc) - Search query for complex phrases (e.g with "when, while")
 14. Sorting (soc) - Sort search query results.
+15. Analyzer (ac) - Usage of different analyzers (standard,whitespace,simple,stop).
 
 ##Build and run
 

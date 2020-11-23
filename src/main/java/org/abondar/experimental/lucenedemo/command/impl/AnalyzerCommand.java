@@ -1,8 +1,8 @@
 package org.abondar.experimental.lucenedemo.command.impl;
 
+import org.abondar.experimental.lucenedemo.command.Command;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.core.KeywordAnalyzer;
 import org.apache.lucene.analysis.core.SimpleAnalyzer;
 import org.apache.lucene.analysis.core.StopAnalyzer;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.io.StringReader;
 
 
-public class AnalyzerDemo {
+public class AnalyzerCommand implements Command {
     private static final String[] examples = {
             "The quick brown fox jumped over lazy dogs",
             "XY&Z Corporation - xyz@example.com"
@@ -26,17 +26,6 @@ public class AnalyzerDemo {
             new WhitespaceAnalyzer(),
             new SimpleAnalyzer(),
     };
-
-    public static void main(String[] args) throws IOException {
-        String[] strings = examples;
-        if (args.length > 0) {
-            strings = args;
-        }
-
-        for (String string : strings) {
-            analyze(string);
-        }
-    }
 
 
     private static void analyze(String text) throws IOException {
@@ -58,14 +47,27 @@ public class AnalyzerDemo {
 
         stream.reset();
         while (stream.incrementToken()) {
-            System.out.println("Start offset: "+oa.startOffset());
-            System.out.println("End offset: "+oa.endOffset());
-            System.out.println("Token: "+cta.toString());
+            System.out.println("Start offset: " + oa.startOffset());
+            System.out.println("End offset: " + oa.endOffset());
+            System.out.println("Token: " + cta.toString());
 
         }
         stream.end();
         stream.close();
 
+
+    }
+
+    @Override
+    public void execute() {
+        try {
+            for (String string : examples) {
+                analyze(string);
+            }
+        }catch (IOException ex){
+            System.err.println(ex.getMessage());
+            System.exit(1);
+        }
 
     }
 }
