@@ -13,7 +13,7 @@ import org.apache.lucene.queryparser.classic.QueryParser;
 import java.io.File;
 import java.util.Date;
 
-import static org.abondar.experimental.lucenedemo.DirUtil.DATA_DIR;
+import static org.abondar.experimental.lucenedemo.DirUtil.INDEX_DIR;
 
 
 public class SearchCommand implements Command {
@@ -53,7 +53,7 @@ public class SearchCommand implements Command {
     public void execute() {
 
         try {
-            File indexDir = new File(DATA_DIR);
+            File indexDir = new File(INDEX_DIR);
             String q = "class";
 
             if (!indexDir.exists() || !indexDir.isDirectory()) {

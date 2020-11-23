@@ -4,6 +4,7 @@ package org.abondar.experimental.lucenedemo.command;
 import org.abondar.experimental.lucenedemo.command.impl.FileIndexerCommand;
 import org.abondar.experimental.lucenedemo.command.impl.IndexTuningCommand;
 import org.abondar.experimental.lucenedemo.command.impl.IndexerCommand;
+import org.abondar.experimental.lucenedemo.command.impl.PhraseQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SearchCommand;
 import org.abondar.experimental.lucenedemo.command.impl.TermQueryCommand;
 import org.apache.poi.ss.formula.functions.T;
@@ -35,6 +36,11 @@ public class CommandSwitcher {
                 case ITC:
                     IndexTuningCommand itc = new IndexTuningCommand();
                     executor.executeCommand(itc);
+                    break;
+
+                case PQC:
+                    PhraseQueryCommand pqc = new PhraseQueryCommand();
+                    executor.executeCommand(pqc);
                     break;
 
                 case SC:

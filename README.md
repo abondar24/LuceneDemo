@@ -6,6 +6,7 @@ Lucene Examples
 3. File Indexer (fic) - Add a new file to index.
 4. Term Query (tqc) - Make a search in index by term.
 5. Search (sc) - Make a search by word.
+6. Phrase Query (pqc) - Make a phrase query.
 
 ##Build and run
 
