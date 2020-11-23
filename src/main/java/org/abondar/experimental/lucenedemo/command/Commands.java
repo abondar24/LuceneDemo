@@ -4,5 +4,6 @@ public enum  Commands {
     FIC,
     IC,
     ITC,
+    SC,
     TQC,
 }

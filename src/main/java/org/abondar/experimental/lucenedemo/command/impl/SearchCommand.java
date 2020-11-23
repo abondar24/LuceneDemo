@@ -1,5 +1,6 @@
 package org.abondar.experimental.lucenedemo.command.impl;
 
+import org.abondar.experimental.lucenedemo.command.Command;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
@@ -12,19 +13,12 @@ import org.apache.lucene.queryparser.classic.QueryParser;
 import java.io.File;
 import java.util.Date;
 
+import static org.abondar.experimental.lucenedemo.DirUtil.DATA_DIR;
 
-public class SearcherDemo {
 
-    public static void main(String[] args) throws Exception {
-        File indexDir = new File("/home/abondar/Doucments");
-        String q = "intent";
+public class SearchCommand implements Command {
 
-        if (!indexDir.exists() || !indexDir.isDirectory()) {
-            throw new Exception(indexDir + "does not exist or is not a directory");
-        }
 
-        search(indexDir, q);
-    }
 
     private static void search(File indexDir, String q) throws Exception {
         Directory fsDir = FSDirectory.open(indexDir.toPath());
@@ -53,5 +47,24 @@ public class SearcherDemo {
             Document document = indexSearcher.doc(hits[i].doc);
             System.out.println(document.get("filename"));
         }
+    }
+
+    @Override
+    public void execute() {
+
+        try {
+            File indexDir = new File(DATA_DIR);
+            String q = "class";
+
+            if (!indexDir.exists() || !indexDir.isDirectory()) {
+                System.err.println(indexDir + "does not exist or is not a directory");
+                System.exit(1);
+            }
+            search(indexDir, q);
+        } catch (Exception ex){
+            System.err.println(ex.getMessage());
+            System.exit(2);
+        }
+
     }
 }

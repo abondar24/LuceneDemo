@@ -5,7 +5,7 @@ Lucene Examples
 2. Index Tuning (itc) - Tuned indexing
 3. File Indexer (fic) - Add a new file to index.
 4. Term Query (tqc) - Make a search in index by term.
-
+5. Search (sc) - Make a search by word.
 
 ##Build and run
 
