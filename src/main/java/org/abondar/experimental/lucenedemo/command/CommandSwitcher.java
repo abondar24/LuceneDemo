@@ -1,7 +1,7 @@
 package org.abondar.experimental.lucenedemo.command;
 
 
-
+import org.abondar.experimental.lucenedemo.command.impl.IndexerCommand;
 
 public class CommandSwitcher {
 
@@ -16,6 +16,10 @@ public class CommandSwitcher {
         try {
             switch (Commands.valueOf(cmd)){
 
+                case IC:
+                    IndexerCommand ic = new IndexerCommand();
+                    executor.executeCommand(ic);
+                    break;
 
             }
 

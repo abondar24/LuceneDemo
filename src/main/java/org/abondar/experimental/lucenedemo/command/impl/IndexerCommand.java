@@ -1,8 +1,7 @@
 package org.abondar.experimental.lucenedemo.command.impl;
 
+import org.abondar.experimental.lucenedemo.command.Command;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
-
-import org.apache.lucene.analysis.tokenattributes.KeywordAttribute;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
@@ -15,31 +14,11 @@ import org.apache.lucene.store.FSDirectory;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Paths;
 import java.util.Date;
-import java.util.Objects;
 
-public class IndexerDemo {
-    public static void main(String[] args) throws Exception {
+import static java.util.Objects.requireNonNull;
 
-        File indexDir = new File("/home/abondar/Doucments");
-
-        File dataDir;
-        if (args.length==0) {
-             dataDir = new File("/home/abondar/android-sdk-linux");
-        } else {
-            dataDir = new File(args[0]);
-        }
-
-        long start = new Date().getTime();
-        int numIndexed = index(indexDir, dataDir);
-        long end = new Date().getTime();
-
-        System.out.println("Indexing " + numIndexed + " files took "
-                + (end - start) + " milliseconds");
-
-    }
-
+public class IndexerCommand implements Command {
     private static int index(File indexDir, File dataDir) throws IOException {
         if (!dataDir.exists() || !dataDir.isDirectory()) {
             throw new IOException(dataDir + "does not exist or not a directory");
@@ -63,6 +42,7 @@ public class IndexerDemo {
 
         File[] files = dataDir.listFiles();
 
+        requireNonNull(files);
         for (File f : files) {
             if (f.isDirectory()) {
                 indexDir(writer, f);
@@ -73,7 +53,7 @@ public class IndexerDemo {
     }
 
     private static void indexFile(IndexWriter writer, File f) throws IOException {
-        if (f.isHidden() || !f.exists() || !f.canRead()){
+        if (f.isHidden() || !f.exists() || !f.canRead()) {
             return;
         }
 
@@ -86,4 +66,24 @@ public class IndexerDemo {
     }
 
 
+    @Override
+    public void execute() {
+        try {
+            File indexDir = new File("/home/abondar/index");
+
+            File dataDir =  new File("/home/abondar/Documents");
+
+
+            long start = new Date().getTime();
+            int numIndexed = index(indexDir, dataDir);
+            long end = new Date().getTime();
+
+            System.out.println("Indexing " + numIndexed + " files took "
+                    + (end - start) + " milliseconds");
+        } catch (IOException ex) {
+            System.err.println(ex.getMessage());
+            System.exit(1);
+        }
+
+    }
 }
