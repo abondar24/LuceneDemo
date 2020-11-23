@@ -9,7 +9,7 @@ Lucene Examples
 6. Phrase Query (pqc) - Make a phrase query.
 7. Prefix Query (prqc) - Search with a prefix query.
 8. Span Term Query (stqc) - Span term query search.
-
+9. Span Near Query (snqc) - Span near search query. 
 
 ##Build and run
 

@@ -7,6 +7,7 @@ import org.abondar.experimental.lucenedemo.command.impl.IndexerCommand;
 import org.abondar.experimental.lucenedemo.command.impl.PhraseQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.PrefixQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SearchCommand;
+import org.abondar.experimental.lucenedemo.command.impl.SpanNearQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SpanTermQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.TermQueryCommand;
 import org.apache.poi.ss.formula.functions.T;
@@ -53,6 +54,11 @@ public class CommandSwitcher {
                 case SC:
                     SearchCommand sc = new SearchCommand();
                     executor.executeCommand(sc);
+                    break;
+
+                case SNQC:
+                    SpanNearQueryCommand snqc = new SpanNearQueryCommand();
+                    executor.executeCommand(snqc);
                     break;
 
                 case STQC:

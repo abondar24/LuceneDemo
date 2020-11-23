@@ -7,6 +7,7 @@ public enum  Commands {
     PQC,
     PRQC,
     SC,
+    SNQC,
     STQC,
     TQC,
 }
