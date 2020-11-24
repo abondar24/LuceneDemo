@@ -20,6 +20,7 @@ public enum  Commands {
     SOC,
     STQC,
     SXC,
+    TC,
     TQC,
     WDC,
     WQC,

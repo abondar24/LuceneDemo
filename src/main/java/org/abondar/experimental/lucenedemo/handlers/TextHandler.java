@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class PlainTextHandler implements DocumentHandler {
+public class TextHandler implements DocumentHandler {
     public Document getDocument(InputStream inputStream){
         String bodyText = "";
 

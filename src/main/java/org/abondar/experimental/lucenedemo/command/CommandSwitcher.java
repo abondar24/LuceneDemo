@@ -21,8 +21,10 @@ import org.abondar.experimental.lucenedemo.command.impl.SortingCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SpanNearQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SpanTermQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.TermQueryCommand;
+import org.abondar.experimental.lucenedemo.command.impl.TextHandlerCommand;
 import org.abondar.experimental.lucenedemo.command.impl.WildcardQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.WordDocHandlerCommand;
+import org.abondar.experimental.lucenedemo.handlers.TextHandler;
 
 public class CommandSwitcher {
 
@@ -131,6 +133,11 @@ public class CommandSwitcher {
                 case SXC:
                     SaxXmlHandlerCommand sxc = new SaxXmlHandlerCommand();
                     executor.executeCommand(sxc);
+                    break;
+
+                case TC:
+                    TextHandlerCommand tc = new TextHandlerCommand();
+                    executor.executeCommand(tc);
                     break;
 
                 case TQC:

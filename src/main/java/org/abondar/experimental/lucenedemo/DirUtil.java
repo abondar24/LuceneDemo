@@ -15,6 +15,8 @@ public class DirUtil {
 
     public static final String DOC_FILE = "/home/abondar/Documents/document.doc";
 
+    public static final String TEXT_FILE = "/home/abondar/Documents/out.txt";
+
 
     private DirUtil(){}
 }
