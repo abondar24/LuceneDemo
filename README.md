@@ -22,6 +22,7 @@ Lucene Examples
 and the way how are they computed
 19. Like this (ltc) - Find similar documents   
 20. PDF Handler (pdf) - Read and index PDF file. 
+21. SAX XML Handler (sxc) - XML Handler and indexer based on SAX.
 
 ##Build and run
 
@@ -33,6 +34,7 @@ java -jar <jar-location>/lucene.jar <arg>
 
 ## Notes
 - Arguments to run are in ()
-- Change index dir to your own in index util.
+- Change dirs and files to your own in dir util.
 - For File Indexer create a new file.
 - Search query demos require running indexer
+- SaxXMLHandler works with pom.xml

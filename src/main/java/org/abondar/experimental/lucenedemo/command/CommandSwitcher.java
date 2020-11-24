@@ -1,7 +1,6 @@
 package org.abondar.experimental.lucenedemo.command;
 
 
-import org.abondar.experimental.lucenedemo.CustomHitCollector;
 import org.abondar.experimental.lucenedemo.command.impl.AnalyzerCommand;
 import org.abondar.experimental.lucenedemo.command.impl.BooleanQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.ChineseCommand;
@@ -16,6 +15,7 @@ import org.abondar.experimental.lucenedemo.command.impl.MultifieldQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.PdfHandlerCommand;
 import org.abondar.experimental.lucenedemo.command.impl.PhraseQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.PrefixQueryCommand;
+import org.abondar.experimental.lucenedemo.command.impl.SaxXmlHandlerCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SearchCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SortingCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SpanNearQueryCommand;
@@ -32,9 +32,9 @@ public class CommandSwitcher {
     }
 
 
-    public void executeCommand(String cmd){
+    public void executeCommand(String cmd) {
         try {
-            switch (Commands.valueOf(cmd)){
+            switch (Commands.valueOf(cmd)) {
 
                 case AC:
                     AnalyzerCommand ac = new AnalyzerCommand();
@@ -127,6 +127,11 @@ public class CommandSwitcher {
                     executor.executeCommand(stqc);
                     break;
 
+                case SXC:
+                    SaxXmlHandlerCommand sxc = new SaxXmlHandlerCommand();
+                    executor.executeCommand(sxc);
+                    break;
+
                 case TQC:
                     TermQueryCommand tqc = new TermQueryCommand();
                     executor.executeCommand(tqc);
@@ -139,7 +144,7 @@ public class CommandSwitcher {
 
             }
 
-        } catch (IllegalArgumentException ex){
+        } catch (IllegalArgumentException ex) {
             System.out.println("Check documentation for command list");
             System.exit(1);
         }

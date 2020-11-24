@@ -16,7 +16,7 @@ import java.io.InputStream;
 import java.util.HashMap;
 
 
-public class SAXXMLHandler extends DefaultHandler implements DocumentHandler {
+public class SaxXmlHandler extends DefaultHandler implements DocumentHandler {
 
     private StringBuffer elementBuffer = new StringBuffer();
     private HashMap attributeMap;

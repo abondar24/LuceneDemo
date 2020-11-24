@@ -11,5 +11,10 @@ public class DirUtil {
 
     public static final String PDF_FILE = "/home/abondar/Documents/GoogleGuice.pdf";
 
+    public static final String XML_FILE = "/home/abondar/Documents/pom.xml";
+
+    public static final String DOC_FILE = "/home/abondar/Documents/document.doc";
+
+
     private DirUtil(){}
 }

@@ -19,6 +19,7 @@ public enum  Commands {
     SNQC,
     SOC,
     STQC,
+    SXC,
     TQC,
     WQC,
 }
