@@ -21,5 +21,6 @@ public enum  Commands {
     STQC,
     SXC,
     TQC,
+    WDC,
     WQC,
 }

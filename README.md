@@ -21,9 +21,9 @@ Lucene Examples
 18. Explanator (ec) - Show different parameters of search results(e.g wieght,score etc.) 
 and the way how are they computed
 19. Like this (ltc) - Find similar documents   
-20. PDF Handler (pdf) - Read and index PDF file. 
-21. SAX XML Handler (sxc) - XML Handler and indexer based on SAX.
-
+20. PDF Handler (pdf) - Read PDF file. 
+21. SAX XML Handler (sxc) - XML Handler based on SAX.
+22. Word Document Handler (wdc) - Word Document handler based on POI
 ##Build and run
 
 ```yaml

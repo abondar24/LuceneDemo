@@ -22,6 +22,7 @@ import org.abondar.experimental.lucenedemo.command.impl.SpanNearQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SpanTermQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.TermQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.WildcardQueryCommand;
+import org.abondar.experimental.lucenedemo.command.impl.WordDocHandlerCommand;
 
 public class CommandSwitcher {
 
@@ -135,6 +136,11 @@ public class CommandSwitcher {
                 case TQC:
                     TermQueryCommand tqc = new TermQueryCommand();
                     executor.executeCommand(tqc);
+                    break;
+
+                case WDC:
+                    WordDocHandlerCommand wdc = new WordDocHandlerCommand();
+                    executor.executeCommand(wdc);
                     break;
 
                 case WQC:

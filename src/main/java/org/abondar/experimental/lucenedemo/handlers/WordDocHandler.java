@@ -1,7 +1,6 @@
 package org.abondar.experimental.lucenedemo.handlers;
 
 
-import org.abondar.experimental.lucenedemo.handlers.DocumentHandler;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.TextField;
@@ -14,7 +13,7 @@ import java.io.InputStream;
 
 
 
-public class POIWordDocHandler implements DocumentHandler {
+public class WordDocHandler implements DocumentHandler {
 
     public Document getDocument(InputStream is){
         String bodyText = null;
