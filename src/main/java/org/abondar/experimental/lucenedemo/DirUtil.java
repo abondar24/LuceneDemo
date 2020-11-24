@@ -17,6 +17,7 @@ public class DirUtil {
 
     public static final String TEXT_FILE = "/home/abondar/Documents/out.txt";
 
+    public static final String RTF_FILE = "/home/abondar/Documents/out.rtf";
 
     private DirUtil(){}
 }

@@ -24,7 +24,8 @@ and the way how are they computed
 20. PDF Handler (pdf) - Read PDF and index. 
 21. SAX XML Handler (sxc) - XML Handler and indexer based on SAX.
 22. Word Document Handler (wdc) - Word Document handler and indexer based on POI.
-23. Text Handler (tc) - Handler based for a text file.
+23. Text Handler (tc) - Handler for a text file.
+24. RTF Handler (rtf) - Handler for a RTF file.
 
 ##Build and run
 

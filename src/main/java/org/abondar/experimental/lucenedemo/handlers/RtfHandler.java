@@ -12,7 +12,7 @@ import javax.swing.text.rtf.RTFEditorKit;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class RTFHandler  implements DocumentHandler {
+public class RtfHandler implements DocumentHandler {
     public Document getDocument(InputStream inputStream) {
         String bodyText = null;
 

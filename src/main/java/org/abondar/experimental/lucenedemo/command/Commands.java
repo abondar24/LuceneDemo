@@ -15,6 +15,7 @@ public enum  Commands {
     PQC,
     PDF,
     PRQC,
+    RTF,
     SC,
     SNQC,
     SOC,

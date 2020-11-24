@@ -15,6 +15,7 @@ import org.abondar.experimental.lucenedemo.command.impl.MultifieldQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.PdfHandlerCommand;
 import org.abondar.experimental.lucenedemo.command.impl.PhraseQueryCommand;
 import org.abondar.experimental.lucenedemo.command.impl.PrefixQueryCommand;
+import org.abondar.experimental.lucenedemo.command.impl.RtfHandlerCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SaxXmlHandlerCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SearchCommand;
 import org.abondar.experimental.lucenedemo.command.impl.SortingCommand;
@@ -108,6 +109,11 @@ public class CommandSwitcher {
                 case PRQC:
                     PrefixQueryCommand prqc = new PrefixQueryCommand();
                     executor.executeCommand(prqc);
+                    break;
+
+                case RTF:
+                    RtfHandlerCommand rtf = new RtfHandlerCommand();
+                    executor.executeCommand(rtf);
                     break;
 
                 case SC:
