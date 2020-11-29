@@ -27,7 +27,7 @@ and the way how are they computed
 23. Text Handler (tc) - Handler for a text file.
 24. RTF Handler (rtf) - Handler for a RTF file.
 
-##Build and run
+## Build and run
 
 ```yaml
 mvn clean install
