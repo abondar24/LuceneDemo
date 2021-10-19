@@ -55,13 +55,13 @@ public class LikeThis {
 
         TopDocs results = searcher.search(likeThisQuery.build(), 10);
 
-        int size = max;
+        long size = max;
 
         if (max > results.totalHits) {
             size = results.totalHits;
         }
 
-        Document[] docs = new Document[size];
+        Document[] docs = new Document[Long.valueOf(size).intValue()];
         for (int i=0;i<size; i++){
             docs[i] = searcher.doc(results.scoreDocs[i].doc);
         }
